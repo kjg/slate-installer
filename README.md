@@ -1,28 +1,54 @@
 # Slate::Installer
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/slate/installer`. To experiment with that code, run `bin/console` for an interactive prompt.
+Slate::Installer is a utility to install (or update) [Slate](https://github.com/lord/slate) into the docs folder of your project. You then can then add and modify the slate docs right within the same repo as the code it is documenting.
 
-TODO: Delete this and the text above, and describe your gem
+Running the installer on an existing slate installation will pull down the latest slate source and allow you to pick and choose which files to replace so you easily get updates without clobbering your modifications.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'slate-installer'
+  gem 'slate-installer'
 ```
 
 And then execute:
 
-    $ bundle
+```shell
+  $ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install slate-installer
+```shell
+  $ gem install slate-installer
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Slate::Installer is powered by Thor, so you can run
+
+```shell
+$ slate-installer
+
+Slate Installer commands:
+  slate-installer help [COMMAND]  # Describe available commands or one specific command
+  slate-installer install         # creates a docs folder and installs latest slate into it
+
+Runtime options:
+  -f, [--force]                    # Overwrite files that already exist
+  -p, [--pretend], [--no-pretend]  # Run but do not make any changes
+  -q, [--quiet], [--no-quiet]      # Suppress status output
+  -s, [--skip], [--no-skip]        # Skip files that already exist
+```
+
+to see all the available options.
+
+To install slate into your docs folder run
+
+```shell
+  $ slate-installer install
+```
 
 ## Development
 
@@ -32,10 +58,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/slate-installer. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kjg/slate-installer. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
