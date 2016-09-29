@@ -1,5 +1,13 @@
 sudo: false
 language: ruby
 cache: bundler
-rvm:
-  - 2.3.1
+rvm: 2.3.1
+
+deploy:
+  provider: rubygems
+  api_key:
+    secure: hL0h5W084SQgCMufhUYzzrLq0krzt+C5WgmobbB81f684XJ+2FG6SvouPSzrAKLjgv/Ksk3G+oqr6kvTSV7L20+le+dpkE7c1lXDuwzs8Kd/VVr1ZJxDOu5Mn0NcVGvEdl+qKT8GLrz1KskK7QQdld0e+k3F7U+7ixtd2uz9GSZfBBjFSYTc38aa9O9EM0DqzYp717oDxZKChlB5p5G6btawpBGpdjayU+h/x8Pk2XIFTlrZ4lGml5Qku01mjFeBZ2noRl6EYLK1q64bKJ8H1cCyqTVNr2cm9Z+YCi9Wp35SZESDRkNhg6vDOB4zPYzaJZSMpTzjTtyKoI2nroOUjsd0GEAupoumeWqjQSWxtxSTdzHM6OVJe3FI0YPSYk7eVpZbYjvzvHXjJPHgakOIGbrV60+DLaBF07vD4JazoxgG8EKXwJHIF1XvCdXQSns0VcCetaL4wmQvB0pKkf0eWVwhfvAm511i9oHKUhzslIUx2b9vBwi+r3Ed5mLRX21Pr4suVDWpWmaqQL2+8iFMbz0D2/kRFisY8Ym+HoPeaX/yUWsblG311ozQpcqmqWZk7YSUnA4NBWFMJY40G11DWDRNI/8UJrTjyLDGEB/gnIQe8OFDQuYW8iTH8C1VjCCR61WwW0YR9q3hhG4mvx/qM5TwWnrF7xC0uOIlrxOSVlE=
+  gem: slate-installer
+  on:
+    tags: true
+    repo: kjg/slate-installer
