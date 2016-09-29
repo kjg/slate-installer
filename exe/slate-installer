@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+git_path = File.expand_path("../../.git", __FILE__)
+
+if File.exist?(git_path)
+  lib_path = File.expand_path("../../lib", __FILE__)
+  $:.unshift(lib_path)
+end
+
+require "slate/installer/cli"
+Slate::Installer::Cli.start
