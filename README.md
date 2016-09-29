@@ -1,5 +1,7 @@
 # Slate::Installer
 
+[![Build Status](https://travis-ci.org/kjg/slate-installer.svg?branch=master)](https://travis-ci.org/kjg/slate-installer)
+
 Slate::Installer is a utility to install (or update) [Slate](https://github.com/lord/slate) into the docs folder of your project. You then can then add and modify the slate docs right within the same repo as the code it is documenting.
 
 Running the installer on an existing slate installation will pull down the latest slate source and allow you to pick and choose which files to replace so you easily get updates without clobbering your modifications.
