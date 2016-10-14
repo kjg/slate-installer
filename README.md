@@ -52,6 +52,12 @@ To install slate into your docs folder run
   $ slate-installer install
 ```
 
+You can optionally specify the path to a custom logo to have that overwrite the slate logo during install
+
+```shell
+  $ slate-installer install -l path/to/logo.png
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
