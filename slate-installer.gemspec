@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Kevin Glowacz"]
   spec.email         = ["kevin@glowacz.info"]
 
-  spec.summary       = "Easily slate powered docs to your app"
+  spec.summary       = "Easily add slate powered docs to your app"
   spec.description   = "This provides a utility to add and update your docs " \
                        "folder with the latest slate source"
   spec.homepage      = "https://github.com/kjg/slate-installer"
