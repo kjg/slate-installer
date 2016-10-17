@@ -37,6 +37,9 @@ Slate Installer commands:
   slate-installer help [COMMAND]  # Describe available commands or one specific command
   slate-installer install         # creates a docs folder and installs latest slate into it
 
+Options:
+  -l, [--logo=LOGO]  # path to custom logo file
+
 Runtime options:
   -f, [--force]                    # Overwrite files that already exist
   -p, [--pretend], [--no-pretend]  # Run but do not make any changes
