@@ -38,7 +38,8 @@ Slate Installer commands:
   slate-installer install         # creates a docs folder and installs latest slate into it
 
 Options:
-  -l, [--logo=LOGO]  # path to custom logo file
+  -l, [--logo=LOGO]        # path to custom logo file
+  -d, [--dev], [--no-dev]  # install from the slate dev branch
 
 Runtime options:
   -f, [--force]                    # Overwrite files that already exist
@@ -59,6 +60,12 @@ You can optionally specify the path to a custom logo to have that overwrite the 
 
 ```shell
   $ slate-installer install -l path/to/logo.png
+```
+
+You can optionally install slate from its dev branch instead of master with the `-d` option
+
+```shell
+  $ slate-installer install -d
 ```
 
 ## Development

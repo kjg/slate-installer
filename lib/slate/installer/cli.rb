@@ -17,13 +17,20 @@ module Slate
 
       desc "install", "creates a docs folder and installs latest slate into it"
       method_option :logo, :type => :string, :aliases => "-l", :desc => "path to custom logo file", :lazy_default => ""
+      method_option :dev, :type => :boolean, :aliases => "-d", :desc => "install from the slate dev branch"
       def install
         if options[:logo]
           logo = determine_logo_path(options[:logo])
         end
 
         Dir.mktmpdir("slate-src-") do |tmpdir|
-          output, _status = Open3.capture2e("git", "clone", "--depth", "1", "--progress", "https://github.com/lord/slate.git",  tmpdir)
+          branch = if options[:dev]
+            "dev"
+          else
+            "master"
+          end
+
+          output, _status = Open3.capture2e("git", "clone", "--depth", "1", "--branch", branch, "--progress", "https://github.com/lord/slate.git",  tmpdir)
           puts output
 
           if logo
